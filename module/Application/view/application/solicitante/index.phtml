@@ -1,0 +1,28 @@
+<h1>Cadastro de Solicitantes</h1>
+<p>
+    <a href="<?= $this->url('solicitante', ['action' => 'editar']) ?>">Incluir novo solicitante</a>
+</p>
+<table>
+    <thead>
+    <tr>
+        <th>CPF</th>
+        <th style="padding-left: 20px">Nome</th>
+        <th style="padding-left: 20px">Ações</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php
+    foreach ($this->solicitantes as $solicitante):
+        ?>
+        <tr>
+            <td> <a href="<?= $this->url('solicitante', ['action' => 'editar', 'cpf' => $solicitante['cpf']]) ?>"><?= $solicitante['cpf'] ?></a></td>
+            <td style="padding-left: 20px"><?= $solicitante['nome'] ?></td>
+            <td style="padding-left: 20px">
+                <a href="<?= $this->url('solicitante', ['action' => 'excluir', 'cpf' => $solicitante['cpf']]) ?>">X</a>
+            </td>
+        </tr>
+    <?php
+    endforeach;
+    ?>
+    </tbody>
+</table>

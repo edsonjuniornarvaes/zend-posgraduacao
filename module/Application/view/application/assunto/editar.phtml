@@ -1,0 +1,7 @@
+<form action="<?= $this->url('assunto', ['action' => 'gravar']) ?>" method="post">
+    Codigo <input type="text" name="codigo" id="codigo" readonly="readonly" value="<?= $this->assunto->codigo ?>"><br/>
+    Assunto <input type="text" name="assunto" id="assunto" value="<?= $this->assunto->assunto ?>"><br/>
+    Detalhes <input type="text" name="detalhes" id="detalhes" value="<?= $this->assunto->detalhes ?>"><br/>
+
+    <input type="submit" value="gravar">
+</form>

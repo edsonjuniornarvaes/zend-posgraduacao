@@ -1,0 +1,17 @@
+<?php
+/**
+ * @var \Application\Model\Solicitante $solicitante
+ */
+?>
+
+<form action="<?= $this->url('solicitante', ['action' => 'gravar']) ?>" method="post">
+    CPF <input type="text" name="cpf" value="<?=$solicitante->cpf ?>" ></br>
+    Nome <input type="text" name="nome" value="<?=$solicitante->nome ?>"></br>
+    CEP <input type="text" name="cep"  value="<?=$solicitante->cep ?>"></br>
+    Municipio <input type="text" name="municipio"  value="<?=$solicitante->municipio ?>"></br>
+    UF <input type="text" name="uf"  value="<?=$solicitante->uf ?>"></br>
+    e-mail <input type="text" name="email"  value="<?=$solicitante->email ?>"></br>
+    DDD <input type="text" name="ddd"  value="<?=$solicitante->ddd ?>"></br>
+    Telefone <input type="text" name="telefone"  value="<?=$solicitante->telefone ?>"></br>
+    <input type="submit" value="gravar">
+</form>

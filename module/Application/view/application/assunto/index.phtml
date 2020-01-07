@@ -1,0 +1,26 @@
+<h1>Cadastro de Assuntos</h1>
+<p>
+    <a href="<?=$this->url('assunto', ['action' => 'editar'])?>">Incluir assunto</a>
+</p>
+<table>
+    <thead>
+    <tr>
+        <th>Codigo</th>
+        <th>Assunto</th>
+        <th>Exclusão</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php
+    foreach($this->assuntos as $assunto):
+        ?>
+        <tr>
+            <td><a href="<?=$this->url('assunto',['action' => 'editar', 'codigo' =>$assunto['codigo']])?>"><?=$assunto['codigo']?></td>
+            <td><?=$assunto['assunto']?></td>
+            <td><a href="<?=$this->url('assunto',['action' => 'excluir', 'codigo' =>$assunto['codigo']])?>">X</td>
+        </tr>
+    <?php
+    endforeach;
+    ?>
+    </tbody>
+</table>
